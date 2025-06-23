@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props" Condition="Exists('packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CCF53C6C-FC81-414F-91AF-79E4C2DB1499}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PracticaTehnologica</RootNamespace>
+    <AssemblyName>PracticaTehnologica</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.160.1000.6\lib\net462\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Afisare_History_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Afisare_History_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Connection.cs" />
+    <Compile Include="FrmCantitCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCantitCart.Designer.cs">
+      <DependentUpon>FrmCantitCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCart.Designer.cs">
+      <DependentUpon>FrmCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHistory.Designer.cs">
+      <DependentUpon>FrmHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHome.Designer.cs">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmJucariiAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmJucariiAdd.Designer.cs">
+      <DependentUpon>FrmJucariiAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmJucariiModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmJucariiModify.Designer.cs">
+      <DependentUpon>FrmJucariiModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMax&amp;Min.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMax&amp;Min.Designer.cs">
+      <DependentUpon>FrmMax&amp;Min.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMoldova.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMoldova.Designer.cs">
+      <DependentUpon>FrmMoldova.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOutOfStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOutOfStock.Designer.cs">
+      <DependentUpon>FrmOutOfStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPapusiCresc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPapusiCresc.Designer.cs">
+      <DependentUpon>FrmPapusiCresc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProduse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProduse.Designer.cs">
+      <DependentUpon>FrmProduse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSortare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSortare.Designer.cs">
+      <DependentUpon>FrmSortare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTaraTastatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTaraTastatura.Designer.cs">
+      <DependentUpon>FrmTaraTastatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTopProduse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTopProduse.Designer.cs">
+      <DependentUpon>FrmTopProduse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVerifyAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVerifyAdmin.Designer.cs">
+      <DependentUpon>FrmVerifyAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetPapusiDisponibile.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetPapusiDisponibile.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JucariiMd.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JucariiMd.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Lumea_CopiilorAfisare_OutOfStock.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lumea_CopiilorAfisare_OutOfStock.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Lumea_CopiilorDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lumea_CopiilorDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProdusePopulareDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProdusePopulareDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tari.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tari.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Vedere_jucarie_MinMaxPret_Data_Set.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vedere_jucarie_MinMaxPret_Data_Set.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmCantitCart.resx">
+      <DependentUpon>FrmCantitCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCart.resx">
+      <DependentUpon>FrmCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHistory.resx">
+      <DependentUpon>FrmHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHome.resx">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmJucariiAdd.resx">
+      <DependentUpon>FrmJucariiAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmJucariiModify.resx">
+      <DependentUpon>FrmJucariiModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMax&amp;Min.resx">
+      <DependentUpon>FrmMax&amp;Min.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMoldova.resx">
+      <DependentUpon>FrmMoldova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOutOfStock.resx">
+      <DependentUpon>FrmOutOfStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPapusiCresc.resx">
+      <DependentUpon>FrmPapusiCresc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProduse.resx">
+      <DependentUpon>FrmProduse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSortare.resx">
+      <DependentUpon>FrmSortare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTaraTastatura.resx">
+      <DependentUpon>FrmTaraTastatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTopProduse.resx">
+      <DependentUpon>FrmTopProduse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVerifyAdmin.resx">
+      <DependentUpon>FrmVerifyAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="History_REPORT.rdlc" />
+    <EmbeddedResource Include="MaxAndMin_REPORT.rdlc" />
+    <EmbeddedResource Include="OutOfStock_REPORT.rdlc" />
+    <EmbeddedResource Include="PapusiCresc_REPORT.rdlc" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>PracticaTehnologica</CustomToolNamespace>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepMd_REPORT.rdlc" />
+    <EmbeddedResource Include="TopProduse_REPORT.rdlc" />
+    <EmbeddedResource Include="Tari_REPORT.rdlc" />
+    <None Include="Afisare_History_DataSet.xsc">
+      <DependentUpon>Afisare_History_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Afisare_History_DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Afisare_History_DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Afisare_History_DataSet.xss">
+      <DependentUpon>Afisare_History_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GetPapusiDisponibile.xsc">
+      <DependentUpon>GetPapusiDisponibile.xsd</DependentUpon>
+    </None>
+    <None Include="GetPapusiDisponibile.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GetPapusiDisponibile.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GetPapusiDisponibile.xss">
+      <DependentUpon>GetPapusiDisponibile.xsd</DependentUpon>
+    </None>
+    <None Include="JucariiMd.xsc">
+      <DependentUpon>JucariiMd.xsd</DependentUpon>
+    </None>
+    <None Include="JucariiMd.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JucariiMd.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JucariiMd.xss">
+      <DependentUpon>JucariiMd.xsd</DependentUpon>
+    </None>
+    <None Include="Lumea_CopiilorAfisare_OutOfStock.xsc">
+      <DependentUpon>Lumea_CopiilorAfisare_OutOfStock.xsd</DependentUpon>
+    </None>
+    <None Include="Lumea_CopiilorAfisare_OutOfStock.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Lumea_CopiilorAfisare_OutOfStock.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Lumea_CopiilorAfisare_OutOfStock.xss">
+      <DependentUpon>Lumea_CopiilorAfisare_OutOfStock.xsd</DependentUpon>
+    </None>
+    <None Include="Lumea_CopiilorDataSet.xsc">
+      <DependentUpon>Lumea_CopiilorDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Lumea_CopiilorDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Lumea_CopiilorDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Lumea_CopiilorDataSet.xss">
+      <DependentUpon>Lumea_CopiilorDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="ProdusePopulareDataSet.xsc">
+      <DependentUpon>ProdusePopulareDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProdusePopulareDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProdusePopulareDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProdusePopulareDataSet.xss">
+      <DependentUpon>ProdusePopulareDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Tari.xsc">
+      <DependentUpon>Tari.xsd</DependentUpon>
+    </None>
+    <None Include="Tari.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Tari.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Tari.xss">
+      <DependentUpon>Tari.xsd</DependentUpon>
+    </None>
+    <None Include="Vedere_jucarie_MinMaxPret_Data_Set.xsc">
+      <DependentUpon>Vedere_jucarie_MinMaxPret_Data_Set.xsd</DependentUpon>
+    </None>
+    <None Include="Vedere_jucarie_MinMaxPret_Data_Set.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Vedere_jucarie_MinMaxPret_Data_Set.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Vedere_jucarie_MinMaxPret_Data_Set.xss">
+      <DependentUpon>Vedere_jucarie_MinMaxPret_Data_Set.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props'))" />
+  </Target>
+</Project>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="JucariiMd" targetNamespace="http://tempuri.org/JucariiMd.xsd" xmlns:mstns="http://tempuri.org/JucariiMd.xsd" xmlns="http://tempuri.org/JucariiMd.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Lumea_CopiilorConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Lumea_CopiilorConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PracticaTehnologica.Properties.Settings.GlobalReference.Default.Lumea_CopiilorConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Afisare_Jucarii_mdTableAdapter" GeneratorDataComponentClassName="Afisare_Jucarii_mdTableAdapter" Name="Afisare_Jucarii_md" UserDataComponentName="Afisare_Jucarii_mdTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Lumea_CopiilorConnectionString (Settings)" DbObjectName="Lumea_Copiilor.dbo.Afisare_Jucarii_md" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Moldova_Id, Produse_Denumire, Produse_Varsta, Brand_uri_Denumire, Produse_Sex, Produse_Pret, Produse_Cantitate, Categorii_Denumire FROM dbo.Afisare_Jucarii_md</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Moldova_Id" DataSetColumn="Moldova_Id" />
+              <Mapping SourceColumn="Produse_Denumire" DataSetColumn="Produse_Denumire" />
+              <Mapping SourceColumn="Produse_Varsta" DataSetColumn="Produse_Varsta" />
+              <Mapping SourceColumn="Brand_uri_Denumire" DataSetColumn="Brand_uri_Denumire" />
+              <Mapping SourceColumn="Produse_Sex" DataSetColumn="Produse_Sex" />
+              <Mapping SourceColumn="Produse_Pret" DataSetColumn="Produse_Pret" />
+              <Mapping SourceColumn="Produse_Cantitate" DataSetColumn="Produse_Cantitate" />
+              <Mapping SourceColumn="Categorii_Denumire" DataSetColumn="Categorii_Denumire" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="JucariiMd" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="JucariiMd" msprop:Generator_DataSetName="JucariiMd">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Afisare_Jucarii_md" msprop:Generator_RowEvHandlerName="Afisare_Jucarii_mdRowChangeEventHandler" msprop:Generator_RowDeletedName="Afisare_Jucarii_mdRowDeleted" msprop:Generator_RowDeletingName="Afisare_Jucarii_mdRowDeleting" msprop:Generator_RowEvArgName="Afisare_Jucarii_mdRowChangeEvent" msprop:Generator_TablePropName="Afisare_Jucarii_md" msprop:Generator_RowChangedName="Afisare_Jucarii_mdRowChanged" msprop:Generator_RowChangingName="Afisare_Jucarii_mdRowChanging" msprop:Generator_TableClassName="Afisare_Jucarii_mdDataTable" msprop:Generator_RowClassName="Afisare_Jucarii_mdRow" msprop:Generator_TableVarName="tableAfisare_Jucarii_md" msprop:Generator_UserTableName="Afisare_Jucarii_md">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Moldova_Id" msprop:Generator_ColumnPropNameInRow="Moldova_Id" msprop:Generator_ColumnPropNameInTable="Moldova_IdColumn" msprop:Generator_ColumnVarNameInTable="columnMoldova_Id" msprop:Generator_UserColumnName="Moldova_Id" type="xs:int" />
+              <xs:element name="Produse_Denumire" msprop:Generator_ColumnPropNameInRow="Produse_Denumire" msprop:Generator_ColumnPropNameInTable="Produse_DenumireColumn" msprop:Generator_ColumnVarNameInTable="columnProduse_Denumire" msprop:Generator_UserColumnName="Produse_Denumire" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Produse_Varsta" msprop:Generator_ColumnPropNameInRow="Produse_Varsta" msprop:Generator_ColumnPropNameInTable="Produse_VarstaColumn" msprop:Generator_ColumnVarNameInTable="columnProduse_Varsta" msprop:Generator_UserColumnName="Produse_Varsta" type="xs:int" minOccurs="0" />
+              <xs:element name="Brand_uri_Denumire" msprop:Generator_ColumnPropNameInRow="Brand_uri_Denumire" msprop:Generator_ColumnPropNameInTable="Brand_uri_DenumireColumn" msprop:Generator_ColumnVarNameInTable="columnBrand_uri_Denumire" msprop:Generator_UserColumnName="Brand_uri_Denumire" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Produse_Sex" msprop:Generator_ColumnPropNameInRow="Produse_Sex" msprop:Generator_ColumnPropNameInTable="Produse_SexColumn" msprop:Generator_ColumnVarNameInTable="columnProduse_Sex" msprop:Generator_UserColumnName="Produse_Sex" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Produse_Pret" msprop:Generator_ColumnPropNameInRow="Produse_Pret" msprop:Generator_ColumnPropNameInTable="Produse_PretColumn" msprop:Generator_ColumnVarNameInTable="columnProduse_Pret" msprop:Generator_UserColumnName="Produse_Pret" type="xs:int" minOccurs="0" />
+              <xs:element name="Produse_Cantitate" msprop:Generator_ColumnPropNameInRow="Produse_Cantitate" msprop:Generator_ColumnPropNameInTable="Produse_CantitateColumn" msprop:Generator_ColumnVarNameInTable="columnProduse_Cantitate" msprop:Generator_UserColumnName="Produse_Cantitate" type="xs:int" minOccurs="0" />
+              <xs:element name="Categorii_Denumire" msprop:Generator_ColumnPropNameInRow="Categorii_Denumire" msprop:Generator_ColumnPropNameInTable="Categorii_DenumireColumn" msprop:Generator_ColumnVarNameInTable="columnCategorii_Denumire" msprop:Generator_UserColumnName="Categorii_Denumire" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Afisare_Jucarii_md" />
+      <xs:field xpath="mstns:Moldova_Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

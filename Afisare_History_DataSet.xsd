@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Afisare_History_DataSet" targetNamespace="http://tempuri.org/Afisare_History_DataSet.xsd" xmlns:mstns="http://tempuri.org/Afisare_History_DataSet.xsd" xmlns="http://tempuri.org/Afisare_History_DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Lumea_CopiilorConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Lumea_CopiilorConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PracticaTehnologica.Properties.Settings.GlobalReference.Default.Lumea_CopiilorConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Afisare_CumparatTableAdapter" GeneratorDataComponentClassName="Afisare_CumparatTableAdapter" Name="Afisare_Cumparat" UserDataComponentName="Afisare_CumparatTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Lumea_CopiilorConnectionString (Settings)" DbObjectName="Lumea_Copiilor.dbo.Afisare_Cumparat" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Produse_Denumire, ZiuaAchizitionare, Cantitatea, Username FROM dbo.Afisare_Cumparat</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Produse_Denumire" DataSetColumn="Produse_Denumire" />
+              <Mapping SourceColumn="ZiuaAchizitionare" DataSetColumn="ZiuaAchizitionare" />
+              <Mapping SourceColumn="Cantitatea" DataSetColumn="Cantitatea" />
+              <Mapping SourceColumn="Username" DataSetColumn="Username" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Afisare_History_DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="Afisare_History_DataSet" msprop:Generator_DataSetName="Afisare_History_DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Afisare_Cumparat" msprop:Generator_RowEvHandlerName="Afisare_CumparatRowChangeEventHandler" msprop:Generator_RowDeletedName="Afisare_CumparatRowDeleted" msprop:Generator_RowDeletingName="Afisare_CumparatRowDeleting" msprop:Generator_RowEvArgName="Afisare_CumparatRowChangeEvent" msprop:Generator_TablePropName="Afisare_Cumparat" msprop:Generator_RowChangedName="Afisare_CumparatRowChanged" msprop:Generator_RowChangingName="Afisare_CumparatRowChanging" msprop:Generator_TableClassName="Afisare_CumparatDataTable" msprop:Generator_RowClassName="Afisare_CumparatRow" msprop:Generator_TableVarName="tableAfisare_Cumparat" msprop:Generator_UserTableName="Afisare_Cumparat">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Produse_Denumire" msprop:Generator_ColumnPropNameInRow="Produse_Denumire" msprop:Generator_ColumnPropNameInTable="Produse_DenumireColumn" msprop:Generator_ColumnVarNameInTable="columnProduse_Denumire" msprop:Generator_UserColumnName="Produse_Denumire" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ZiuaAchizitionare" msprop:Generator_ColumnPropNameInRow="ZiuaAchizitionare" msprop:Generator_ColumnPropNameInTable="ZiuaAchizitionareColumn" msprop:Generator_ColumnVarNameInTable="columnZiuaAchizitionare" msprop:Generator_UserColumnName="ZiuaAchizitionare" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Cantitatea" msprop:Generator_ColumnPropNameInRow="Cantitatea" msprop:Generator_ColumnPropNameInTable="CantitateaColumn" msprop:Generator_ColumnVarNameInTable="columnCantitatea" msprop:Generator_UserColumnName="Cantitatea" type="xs:int" minOccurs="0" />
+              <xs:element name="Username" msprop:Generator_ColumnPropNameInRow="Username" msprop:Generator_ColumnPropNameInTable="UsernameColumn" msprop:Generator_ColumnVarNameInTable="columnUsername" msprop:Generator_UserColumnName="Username" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Afisare_Cumparat" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

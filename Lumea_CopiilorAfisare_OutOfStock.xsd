@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Lumea_CopiilorAfisare_OutOfStock" targetNamespace="http://tempuri.org/Lumea_CopiilorAfisare_OutOfStock.xsd" xmlns:mstns="http://tempuri.org/Lumea_CopiilorAfisare_OutOfStock.xsd" xmlns="http://tempuri.org/Lumea_CopiilorAfisare_OutOfStock.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Lumea_CopiilorConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Lumea_CopiilorConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PracticaTehnologica.Properties.Settings.GlobalReference.Default.Lumea_CopiilorConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Afisare_OutOfStockTableAdapter" GeneratorDataComponentClassName="Afisare_OutOfStockTableAdapter" Name="Afisare_OutOfStock" UserDataComponentName="Afisare_OutOfStockTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Lumea_CopiilorConnectionString (Settings)" DbObjectName="Lumea_Copiilor.dbo.Afisare_OutOfStock" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Denumire, Varsta, Brand, Sex, Pret, Tara, Categorie FROM dbo.Afisare_OutOfStock</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Denumire" DataSetColumn="Denumire" />
+              <Mapping SourceColumn="Varsta" DataSetColumn="Varsta" />
+              <Mapping SourceColumn="Brand" DataSetColumn="Brand" />
+              <Mapping SourceColumn="Sex" DataSetColumn="Sex" />
+              <Mapping SourceColumn="Pret" DataSetColumn="Pret" />
+              <Mapping SourceColumn="Tara" DataSetColumn="Tara" />
+              <Mapping SourceColumn="Categorie" DataSetColumn="Categorie" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Lumea_CopiilorAfisare_OutOfStock" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="Lumea_CopiilorAfisare_OutOfStock" msprop:Generator_DataSetName="Lumea_CopiilorAfisare_OutOfStock">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Afisare_OutOfStock" msprop:Generator_RowEvHandlerName="Afisare_OutOfStockRowChangeEventHandler" msprop:Generator_RowDeletedName="Afisare_OutOfStockRowDeleted" msprop:Generator_RowDeletingName="Afisare_OutOfStockRowDeleting" msprop:Generator_RowEvArgName="Afisare_OutOfStockRowChangeEvent" msprop:Generator_TablePropName="Afisare_OutOfStock" msprop:Generator_RowChangedName="Afisare_OutOfStockRowChanged" msprop:Generator_RowChangingName="Afisare_OutOfStockRowChanging" msprop:Generator_TableClassName="Afisare_OutOfStockDataTable" msprop:Generator_RowClassName="Afisare_OutOfStockRow" msprop:Generator_TableVarName="tableAfisare_OutOfStock" msprop:Generator_UserTableName="Afisare_OutOfStock">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Denumire" msprop:Generator_ColumnPropNameInRow="Denumire" msprop:Generator_ColumnPropNameInTable="DenumireColumn" msprop:Generator_ColumnVarNameInTable="columnDenumire" msprop:Generator_UserColumnName="Denumire" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Varsta" msprop:Generator_ColumnPropNameInRow="Varsta" msprop:Generator_ColumnPropNameInTable="VarstaColumn" msprop:Generator_ColumnVarNameInTable="columnVarsta" msprop:Generator_UserColumnName="Varsta" type="xs:int" minOccurs="0" />
+              <xs:element name="Brand" msprop:Generator_ColumnPropNameInRow="Brand" msprop:Generator_ColumnPropNameInTable="BrandColumn" msprop:Generator_ColumnVarNameInTable="columnBrand" msprop:Generator_UserColumnName="Brand" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sex" msprop:Generator_ColumnPropNameInRow="Sex" msprop:Generator_ColumnPropNameInTable="SexColumn" msprop:Generator_ColumnVarNameInTable="columnSex" msprop:Generator_UserColumnName="Sex" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pret" msprop:Generator_ColumnPropNameInRow="Pret" msprop:Generator_ColumnPropNameInTable="PretColumn" msprop:Generator_ColumnVarNameInTable="columnPret" msprop:Generator_UserColumnName="Pret" type="xs:int" minOccurs="0" />
+              <xs:element name="Tara" msprop:Generator_ColumnPropNameInRow="Tara" msprop:Generator_ColumnPropNameInTable="TaraColumn" msprop:Generator_ColumnVarNameInTable="columnTara" msprop:Generator_UserColumnName="Tara" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Categorie" msprop:Generator_ColumnPropNameInRow="Categorie" msprop:Generator_ColumnPropNameInTable="CategorieColumn" msprop:Generator_ColumnVarNameInTable="columnCategorie" msprop:Generator_UserColumnName="Categorie" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Afisare_OutOfStock" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
